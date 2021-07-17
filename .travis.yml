@@ -23,7 +23,7 @@ before_script:
   - $TRAVIS_BUILD_DIR/configure $CONFIG
 script:
   - make -j3
-  - qemu-system-aarch64 -kernel arm/gic.flat -smp 8 -machine gic-version=2 -append 'mmio'
+  - qemu-system-aarch64 -M virt -kernel arm/gic.flat -smp 8 -machine gic-version=2 -append 'mmio'
   - if [ -n "$TESTS" ]; then
       ACCEL="${ACCEL:-tcg}" ./run_tests.sh -v $TESTS | tee results.txt &&
       grep -q PASS results.txt && ! grep -q FAIL results.txt ;
