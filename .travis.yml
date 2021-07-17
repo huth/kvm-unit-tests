@@ -29,4 +29,4 @@ script:
       grep -q PASS results.txt && ! grep -q FAIL results.txt ;
     fi
   - ls logs
-  - cat logs/gicv2-mmio
+  - cat logs/gicv2-mmio.log
