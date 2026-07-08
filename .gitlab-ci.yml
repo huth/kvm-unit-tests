@@ -205,6 +205,7 @@ build-ppc64be:
       selftest-migration
       selftest-migration-skip
       selftest-migration-ci
+      selftest-panic
       selftest-setup
       sieve
       smp
@@ -238,6 +239,7 @@ build-ppc64le:
       selftest-migration
       selftest-migration-skip
       selftest-migration-ci
+      selftest-panic
       selftest-setup
       sieve
       smp
